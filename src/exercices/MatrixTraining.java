@@ -8,7 +8,7 @@ public class MatrixTraining {
      */
     public int[][] emptyIntMatrix(int lines, int columns) {
 
-        return null;
+        return new int[lines][columns];
     }
 
     /**
@@ -19,7 +19,7 @@ public class MatrixTraining {
      */
     public String[][] emptyStringMatrix(int lines, int columns) {
 
-        return null;
+        return new String[lines][columns];
     }
 
     /**
@@ -30,8 +30,7 @@ public class MatrixTraining {
      */
     public int[][] intMatrix(int[] a, int[] b, int[] c) {
 
-        return null;
-    }
+        return int [][]{a,b,c};
 
     /**
      * @param a first array
@@ -41,8 +40,7 @@ public class MatrixTraining {
      */
     public String[][] stringMatrix(String[] a, String[] b, String[] c) {
 
-        return null;
-    }
+        return String [][] {a,b,c};
 
     /**
      * @param matrix, eg: {{3, 4}, {6, 7}, {5, 8}}
@@ -50,7 +48,7 @@ public class MatrixTraining {
      */
     public int height(int[][] matrix) {
 
-        return 0;
+        return matrix.length;
     }
 
     /**
@@ -59,7 +57,7 @@ public class MatrixTraining {
      */
     public int width(int[][] matrix) {
 
-        return 0;
+        return matrix[0].length;
     }
 
     /**
@@ -70,7 +68,7 @@ public class MatrixTraining {
      */
     public int valueAtPosition(int[][] matrix, int line, int column) {
 
-        return 0;
+        return matrix[lines][columns];
     }
 
     /**
@@ -83,7 +81,8 @@ public class MatrixTraining {
      */
     public int[][] replace(int[][] matrix, int value, int line, int column) {
 
-        return null;
+    	matrix[column][line] = value;
+        return matrix;
     }
 
     /**
@@ -92,8 +91,15 @@ public class MatrixTraining {
      */
     public int sum(int[][] matrix) {
 
-        return 0;
+    	int i =0;
+        for(int[] mm: matrix){
+            for(int m :mm){
+                i+=m;
+            }
+        }
+        return i;
     }
+    
 
     /**
      * @param matrix, eg: {{1, 2, 3}, {4, 5, 6}}
@@ -102,8 +108,15 @@ public class MatrixTraining {
      */
     public boolean contains(int[][] matrix, int search) {
 
+        rfor(int[] mm: matrix) {
+            for (int m : mm) {
+                if (m == search)
+                    return true;
+            }
+        }
         return false;
     }
+    
 
     /**
      * @param matrix, eg: {{1, 2, 3}, {4, 5, 6}}
@@ -111,7 +124,14 @@ public class MatrixTraining {
      */
     public int countEvens(int[][] matrix) {
 
-        return 0;
+        return int i =0;
+        for(int[] mm: matrix) {
+            for (int m : mm) {
+                if (m %2 ==0)
+                    i++;
+            }
+        }
+        return i;
     }
 
     /**
@@ -121,6 +141,14 @@ public class MatrixTraining {
      */
     public int occurrences(char[][] matrix, char search) {
 
-        return 0;
+        return  int i =0;
+        for(char[] mm: matrix) {
+            for (char m : mm) {
+                if (m ==search)
+                    i++;
+            }
+        }
+        return i;
     }
+    
 }
